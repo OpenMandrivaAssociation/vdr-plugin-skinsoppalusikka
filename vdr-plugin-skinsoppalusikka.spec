@@ -43,7 +43,7 @@ cat > README.install.urpmi <<EOF
 EOF
 
 %build
-%vdr_plugin_build
+%vdr_plugin_build STRIP=/bin/true
 
 %install
 rm -rf %{buildroot}
