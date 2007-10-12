@@ -23,7 +23,7 @@ BuildRequires:	vdr-devel >= 1.4.1-6
 Requires:	vdr-abi = %vdr_abi
 
 %description
-The "Soppalusikka" is a standalone VDR skin based on "enElchi"
+The "Soppalusikka" is a standalone VDR skin based on "ElchiAIO"
 text2skin addon.
 
 %vdr_chanlogo_notice
