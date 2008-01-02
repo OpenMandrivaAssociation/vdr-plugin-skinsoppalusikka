@@ -16,6 +16,7 @@ URL:		http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/
 # tar --wildcards --delete -f vdr-skinsoppalusikka-*.tar 'skinsoppalusikka-*/logos*'
 # bzip2 vdr-skinsoppalusikka-*.tar
 Source:		vdr-%plugin-%version.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 Obsoletes:	vdr-skin-soppalusikka
 Provides:	vdr-skin-soppalusikka
 BuildRequires:	vdr-devel >= 1.4.1-6
