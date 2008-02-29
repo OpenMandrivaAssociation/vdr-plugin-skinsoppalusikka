@@ -1,8 +1,8 @@
 
 %define plugin	skinsoppalusikka
 %define name	vdr-plugin-%plugin
-%define version	1.0.4
-%define rel	6
+%define version	1.0.6
+%define rel	1
 
 Summary:	VDR plugin: Soppalusikka skin
 Name:		%name
@@ -11,11 +11,7 @@ Release:	%mkrel %rel
 Group:		Video
 License:	GPL
 URL:		http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/
-# Channel logos are removed from the tarball
-# gunzip vdr-skinsoppalusikka-*.tgz
-# tar --wildcards --delete -f vdr-skinsoppalusikka-*.tar 'skinsoppalusikka-*/logos*'
-# bzip2 vdr-skinsoppalusikka-*.tar
-Source:		vdr-%plugin-%version.tar.bz2
+Source:		vdr-%plugin-%version.tgz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 Obsoletes:	vdr-skin-soppalusikka
 Provides:	vdr-skin-soppalusikka
