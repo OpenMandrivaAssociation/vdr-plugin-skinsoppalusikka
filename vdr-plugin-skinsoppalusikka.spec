@@ -1,7 +1,7 @@
 
 %define plugin	skinsoppalusikka
 %define name	vdr-plugin-%plugin
-%define version	1.0.6
+%define version	1.6.0
 %define rel	1
 
 Summary:	VDR plugin: Soppalusikka skin
@@ -13,19 +13,19 @@ License:	GPL
 URL:		http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/
 Source:		vdr-%plugin-%version.tgz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-Obsoletes:	vdr-skin-soppalusikka
-Provides:	vdr-skin-soppalusikka
-BuildRequires:	vdr-devel >= 1.4.1-6
+Obsoletes:	vdr-skin-soppalusikka < 1.6.0
+BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
 
 %description
-The "Soppalusikka" is a standalone VDR skin based on "ElchiAIO"
-text2skin addon.
+The "Soppalusikka" is a standalone skin providing the good old
+"ElchiAIO" looks.
 
 %vdr_chanlogo_notice
 
 %prep
 %setup -q -n %plugin-%version
+%vdr_plugin_prep
 
 %vdr_plugin_params_begin %plugin
 # Channel logo directory
