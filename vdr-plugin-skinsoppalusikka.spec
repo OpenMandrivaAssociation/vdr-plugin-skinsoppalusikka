@@ -1,15 +1,15 @@
 
 %define plugin	skinsoppalusikka
 %define name	vdr-plugin-%plugin
-%define version	1.6.0
-%define rel	3
+%define version	1.6.4
+%define rel	1
 
 Summary:	VDR plugin: Soppalusikka skin
 Name:		%name
 Version:	%version
 Release:	%mkrel %rel
 Group:		Video
-License:	GPL
+License:	GPLv2+
 URL:		http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/
 Source:		vdr-%plugin-%version.tgz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
@@ -59,5 +59,5 @@ rm -rf %{buildroot}
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
-%doc README COPYING HISTORY README.install.urpmi
+%doc README HISTORY README.install.urpmi
 %{_vdr_themedir}/*.theme
