@@ -1,8 +1,8 @@
 
 %define plugin	skinsoppalusikka
 %define name	vdr-plugin-%plugin
-%define version	1.6.4
-%define rel	2
+%define version	1.6.5
+%define rel	1
 
 Summary:	VDR plugin: Soppalusikka skin
 Name:		%name
