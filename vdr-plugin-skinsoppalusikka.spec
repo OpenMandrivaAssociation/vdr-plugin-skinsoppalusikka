@@ -2,7 +2,7 @@
 %define plugin	skinsoppalusikka
 %define name	vdr-plugin-%plugin
 %define version	1.6.5
-%define rel	1
+%define rel	2
 
 Summary:	VDR plugin: Soppalusikka skin
 Name:		%name
@@ -12,7 +12,6 @@ Group:		Video
 License:	GPLv2+
 URL:		http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/
 Source:		vdr-%plugin-%version.tgz
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 Obsoletes:	vdr-skin-soppalusikka < 1.6.0
 BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
@@ -42,20 +41,10 @@ EOF
 %vdr_plugin_build STRIP=/bin/true
 
 %install
-rm -rf %{buildroot}
 %vdr_plugin_install
 
 install -d -m755 %{buildroot}%{_vdr_themedir}
 install -m644 themes/*.theme %{buildroot}%{_vdr_themedir}
-
-%clean
-rm -rf %{buildroot}
-
-%post
-%vdr_plugin_post %plugin
-
-%postun
-%vdr_plugin_postun %plugin
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
