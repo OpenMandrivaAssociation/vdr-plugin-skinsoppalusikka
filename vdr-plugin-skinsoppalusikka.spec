@@ -10,7 +10,7 @@ Version:	%version
 Release:	%mkrel %rel
 Group:		Video
 License:	GPLv2+
-URL:		http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/
+URL:		https://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka/
 Source:		vdr-%plugin-%version.tgz
 Obsoletes:	vdr-skin-soppalusikka < 1.6.0
 BuildRequires:	vdr-devel >= 1.6.0
